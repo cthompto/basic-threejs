@@ -9,7 +9,7 @@
 import * as THREE from 'three';
 
 // The plug-in for orbit controls
-import { OrbitControls } from '../src/OrbitControls.js';
+import { OrbitControls } from './src/OrbitControls.js';
 
 // Declaring global variables.
 let camera, canvas, controls, scene, renderer;
@@ -26,7 +26,7 @@ function init() {
     scene.background = new THREE.Color( 0xbfeff5 );
     scene.fog = new THREE.FogExp2( 0xbfeff5, 0.0015 );
     renderer = new THREE.WebGLRenderer( { antialias: true } );
-    renderer.setPixelRatio( window.devicePixelRatio );
+    //renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize( 400,400 );
     renderer.setAnimationLoop( animate );
     canvas.appendChild( renderer.domElement );
